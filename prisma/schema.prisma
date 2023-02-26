@@ -1,0 +1,25 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model TrainingProgramDay {
+  id Int @id @default(autoincrement())
+
+  trainingProgramId Int             @map("training_program_id")
+  trainingProgram   TrainingProgram @relation(fields: [trainingProgramId], references: [id], onDelete: Cascade)
+
+  @@map("training_program_day")
+}
+
+model TrainingProgram {
+  id Int @id @default(autoincrement())
+
+  days TrainingProgramDay[]
+
+  @@map("training_program")
+}

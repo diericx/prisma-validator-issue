@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { test } from '$lib/trainingProgram';
+  import { test } from "$lib/trainingProgram";
 
-	test();
+  test();
 </script>
 
 <h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>
+  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
+</p>
